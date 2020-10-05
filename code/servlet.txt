@@ -1,0 +1,104 @@
+servletConfig
+servletContext
+Servlet
+GenericServlet
+HttpServlet
+
+getParamter
+
+
+请求转发和重定向
+请求转发：服务器内跳转
+重定向：服务器外跳转
+
+域属性的请求方法(请求转发)
+response.get.RequestDispatcher("xxx").forward(req,res);
+
+重定向，可以在一个服务器上跨项目访问，防止表单重复提交，可以防止恶意提交和刷新
+response.sendRedirect("xxx");
+
+重定向乱码
+重定向前的请求页面设置(front-servlet.java)
+xxx = URLEncoder.encode(xxx,"utf-8");
+重定向后的页面代码(after-servlet.java)
+xxxx = URLDecoder.decode(xxxx,"utf-8");
+xxxx = new String (xxxx,getBytes("ios8859-1"),"utf-8");
+
+
+
+
+
+getURL
+getURI
+getContextPath
+servletPath；精确路径
+pathInfo：/*     *代表的路径
+
+
+request乱码
+//	request中文乱码万能解决办法，适配低版本Tomcat
+//	String name=request.getParameter("name");
+//	byte[] bytes=name.getBytes("IOS8859-1");
+//	name=new String(bytes,"utf-8");
+
+//	只能解决post提交方式，Tomcat9解决了get提交方式的乱码问题
+	request.setCharacterEncoding("utf-8");
+		
+response乱码
+//	response.setCharacterEncoding("utf-8");
+//	设置响应的MIME类型，video/mp4  img/jpg
+//	其中可以指定MIME类型的字符编码，即响应体的字符编码
+	response.setContentType("text/html;charset=utf-8");
+		
+//	覆盖setContentType的charset
+//	request.setCharacterEncoding("utf-8");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
