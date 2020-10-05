@@ -1,0 +1,2 @@
+# StudyDoc
+Some daily resources
