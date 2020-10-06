@@ -1,0 +1,17 @@
+JavaSE
+类 对象 构造方法 封装 static 实例方法 this 继承 覆盖 多台 super()
+
+进阶
+final 抽象方法 接口 包(import) object类 内部类 数组 算法 UML 异常捕获处理 集合 collection接口 迭代器 数据结构 流
+多线程 同步异步(synchronzied) 死锁 反射 注解
+
+DB
+MySQL JDBC
+
+前端
+html css JS 
+
+后端
+B/S结构 Tomcat Servlet JSP 
+
+AJAX jquery 
